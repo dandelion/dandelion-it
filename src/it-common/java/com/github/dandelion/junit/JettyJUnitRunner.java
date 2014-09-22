@@ -36,6 +36,8 @@ import java.lang.annotation.Target;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.jasper.servlet.JspServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletHolder;
@@ -49,6 +51,7 @@ import org.junit.runners.model.FrameworkMethod;
 import org.junit.runners.model.InitializationError;
 import org.junit.runners.model.MultipleFailureException;
 import org.junit.runners.model.Statement;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.github.dandelion.AbstractIT;
 import com.github.dandelion.TemplateEngine;
@@ -95,6 +98,8 @@ import static org.springframework.core.annotation.AnnotationUtils.findAnnotation
  */
 public class JettyJUnitRunner extends BlockJUnit4ClassRunner {
 
+	private static final Log logger = LogFactory.getLog(JettyJUnitRunner.class);
+
 	private Server httpServer;
 
 	public JettyJUnitRunner(Class<?> clazz) throws InitializationError {
@@ -118,11 +123,12 @@ public class JettyJUnitRunner extends BlockJUnit4ClassRunner {
 	private static Server createHttpServer(ServerConfig serverConfig) {
 
 		final Server server = new Server(serverConfig.port());
-
 		final WebAppContext context = new WebAppContext();
 		context.setServer(server);
 		context.setContextPath(serverConfig.contextPath());
 		context.setWar(serverConfig.webappBase());
+//		context.setParentLoaderPriority(true);
+//		context.setAttribute("org.eclipse.jetty.server.webapp.ContainerIncludeJarPattern", ".*/[^/]*servlet-api-[^/]*\\.jar$|.*/javax.servlet.jsp.jstl-.*\\.jar$|.*/org.apache.taglibs.taglibs-standard-impl-.*\\.jar$");
 		server.setHandler(context);
 
 		switch (serverConfig.templateEngine()) {
@@ -158,6 +164,7 @@ public class JettyJUnitRunner extends BlockJUnit4ClassRunner {
 			startServer(this.httpServer);
 		}
 		catch (Exception e) {
+			e.printStackTrace();
 			throw new InitializationError(e);
 		}
 	}
@@ -175,7 +182,7 @@ public class JettyJUnitRunner extends BlockJUnit4ClassRunner {
 	private static void startServer(Server server) throws Exception {
 
 		try {
-			System.out.println("Starting embedded Jetty server");
+			logger.debug("Starting embedded Jetty server");
 			server.start();
 			// server.join();
 		}
@@ -192,6 +199,7 @@ public class JettyJUnitRunner extends BlockJUnit4ClassRunner {
 			// server.join();
 		}
 		catch (Exception e) {
+			e.printStackTrace();
 			throw new InitializationError(e);
 		}
 	}

@@ -104,7 +104,7 @@ public abstract class AbstractDatatablesIT extends AbstractIT {
 
 		switch (serverConfig.templateEngine()) {
 		case JSP:
-			cacheKey = cacheManager.generateCacheKey("http://" + SERVER_HOST + ":" + SERVER_PORT + "/" + page + ".jsp",
+			cacheKey = cacheManager.generateCacheKey("http://" + SERVER_HOST + ":" + SERVER_PORT + "/" + page,
 					asset);
 			break;
 		case THYMELEAF:

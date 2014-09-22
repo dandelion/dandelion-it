@@ -30,15 +30,13 @@
 
 package com.github.dandelion.datatables.basics;
 
-import java.util.concurrent.TimeUnit;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.github.dandelion.AbstractDatatablesIT;
+import com.github.dandelion.TemplateEngine;
 import com.github.dandelion.junit.JettyJUnitRunner;
 import com.github.dandelion.junit.JettyJUnitRunner.ServerConfig;
-import com.github.dandelion.TemplateEngine;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

@@ -50,8 +50,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class MutipleTablesIT extends AbstractDatatablesIT {
 
 	@Test
-	public void should_disable_paging() {
-		goTo("/basics/multiple_tables.jsp");
+	public void should_display_multiple_tables_on_the_same_page() {
+		goToPage("basics/multiple_tables");
 		
 		assertThat(find("#" + TABLE_ID + "_wrapper")).hasSize(1);
 		assertThat(find("#" + TABLE_ID2 + "_wrapper")).hasSize(1);

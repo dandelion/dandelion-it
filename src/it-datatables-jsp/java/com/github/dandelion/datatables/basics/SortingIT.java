@@ -103,7 +103,7 @@ public class SortingIT extends AbstractDatatablesIT {
 	@Test
 	public void should_control_direction_using_ajax() {
 		goToPage("basics/sorting/sorting_direction_ajax");
-		
+		System.out.println(driver.getPageSource());
 		click(getTable().find("thead").find("th", 0));
 		click(getTable().find("thead").find("th", 0));
 		assertThat(getTable().find("thead").find("th", 0).getAttribute("class")).isEqualTo("sorting_desc");

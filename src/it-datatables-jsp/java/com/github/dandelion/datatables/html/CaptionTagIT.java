@@ -53,7 +53,7 @@ public class CaptionTagIT extends AbstractDatatablesIT {
 	@Test
 	public void should_populate_caption_value_with_evaluated_tag() {
 		goToPage("html/table_with_dynamic_caption");
-
+		System.out.println(driver.getPageSource());
 		assertThat(getTable().find("caption").getText()).isEqualTo("dynamic with JSP tag");
 	}
 }
