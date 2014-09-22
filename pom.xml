@@ -85,16 +85,16 @@
          <artifactId>datatables-thymeleaf</artifactId>
          <version>${dandelion.version}</version>
       </dependency>
-      <dependency>
-         <groupId>com.github.dandelion</groupId>
-         <artifactId>select2-jsp</artifactId>
-         <version>${dandelion.version}</version>
-      </dependency>
-      <dependency>
-         <groupId>com.github.dandelion</groupId>
-         <artifactId>select2-thymeleaf</artifactId>
-         <version>${dandelion.version}</version>
-      </dependency>
+<!--       <dependency> -->
+<!--          <groupId>com.github.dandelion</groupId> -->
+<!--          <artifactId>select2-jsp</artifactId> -->
+<!--          <version>${dandelion.version}</version> -->
+<!--       </dependency> -->
+<!--       <dependency> -->
+<!--          <groupId>com.github.dandelion</groupId> -->
+<!--          <artifactId>select2-thymeleaf</artifactId> -->
+<!--          <version>${dandelion.version}</version> -->
+<!--       </dependency> -->
 
       <!-- Thymeleaf -->
       <dependency>
