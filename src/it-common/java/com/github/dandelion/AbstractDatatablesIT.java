@@ -33,12 +33,12 @@ import java.io.IOException;
 import java.net.URL;
 
 import org.fluentlenium.core.domain.FluentWebElement;
+import org.springframework.core.annotation.AnnotationUtils;
 
 import com.github.dandelion.core.DandelionException;
 import com.github.dandelion.core.asset.Asset;
 import com.github.dandelion.core.asset.AssetType;
 import com.github.dandelion.core.asset.cache.AssetCacheManager;
-import com.github.dandelion.core.utils.AnnotationUtils;
 import com.github.dandelion.core.utils.ResourceUtils;
 import com.github.dandelion.core.web.DandelionServlet;
 import com.github.dandelion.junit.JettyJUnitRunner.ServerConfig;
