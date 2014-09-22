@@ -271,7 +271,7 @@
                         </goals>
                         <configuration>
                            <sources>
-                              <source>src/it-jsp-core/java</source>
+                              <source>src/it-core-jsp/java</source>
                            </sources>
                         </configuration>
                      </execution>
@@ -284,7 +284,7 @@
                         <configuration>
                            <resources>
                               <resource>
-                                 <directory>src/it-jsp-core/resources/</directory>
+                                 <directory>src/it-core-jsp/resources/</directory>
                                  <targetPath>${project.build.testOutputDirectory}</targetPath>
                                  <includes>
                                     <include>**/*</include>
@@ -299,7 +299,7 @@
          </build>
       </profile>
       <profile>
-         <id>core-tml</id>
+         <id>core-thymeleaf</id>
          <build>
             <plugins>
                <plugin>
@@ -315,7 +315,7 @@
                         </goals>
                         <configuration>
                            <sources>
-                              <source>src/it-tml-core/java</source>
+                              <source>src/it-core-thymeleaf/java</source>
                            </sources>
                         </configuration>
                      </execution>
@@ -328,7 +328,7 @@
                         <configuration>
                            <resources>
                               <resource>
-                                 <directory>src/it-tml-core/resources/</directory>
+                                 <directory>src/it-core-thymeleaf/resources/</directory>
                                  <targetPath>${project.build.testOutputDirectory}</targetPath>
                                  <includes>
                                     <include>**/*</include>
@@ -359,7 +359,7 @@
                         </goals>
                         <configuration>
                            <sources>
-                              <source>src/it-jsp-datatables/java</source>
+                              <source>src/it-datatables-jsp/java</source>
                            </sources>
                         </configuration>
                      </execution>
@@ -372,7 +372,7 @@
                         <configuration>
                            <resources>
                               <resource>
-                                 <directory>src/it-jsp-datatables/resources/</directory>
+                                 <directory>src/it-datatables-jsp/resources/</directory>
                                  <targetPath>${project.build.testOutputDirectory}</targetPath>
                                  <includes>
                                     <include>**/*</include>
@@ -387,7 +387,7 @@
          </build>
       </profile>
       <profile>
-         <id>datatables-tml</id>
+         <id>datatables-thymeleaf</id>
          <build>
             <plugins>
                <plugin>
@@ -403,7 +403,7 @@
                         </goals>
                         <configuration>
                            <sources>
-                              <source>src/it-tml-datatables/java</source>
+                              <source>src/it-datatables-thymeleaf/java</source>
                            </sources>
                         </configuration>
                      </execution>
@@ -416,7 +416,7 @@
                         <configuration>
                            <resources>
                               <resource>
-                                 <directory>src/it-tml-datatables/resources/</directory>
+                                 <directory>src/it-datatables-thymeleaf/resources/</directory>
                                  <targetPath>${project.build.testOutputDirectory}</targetPath>
                                  <includes>
                                     <include>**/*</include>
@@ -447,7 +447,7 @@
                         </goals>
                         <configuration>
                            <sources>
-                              <source>src/it-jsp-select2/java</source>
+                              <source>src/it-select2-jsp/java</source>
                            </sources>
                         </configuration>
                      </execution>
@@ -460,7 +460,7 @@
                         <configuration>
                            <resources>
                               <resource>
-                                 <directory>src/it-jsp-select2/resources/</directory>
+                                 <directory>src/it-select2-jsp/resources/</directory>
                                  <targetPath>${project.build.testOutputDirectory}</targetPath>
                                  <includes>
                                     <include>**/*</include>
@@ -475,7 +475,7 @@
          </build>
       </profile>
       <profile>
-         <id>select2-tml</id>
+         <id>select2-thymeleaf</id>
          <build>
             <plugins>
                <plugin>
@@ -491,7 +491,7 @@
                         </goals>
                         <configuration>
                            <sources>
-                              <source>src/it-tml-select2/java</source>
+                              <source>src/it-select2-thymeleaf/java</source>
                            </sources>
                         </configuration>
                      </execution>
@@ -504,7 +504,7 @@
                         <configuration>
                            <resources>
                               <resource>
-                                 <directory>src/it-tml-select2/resources/</directory>
+                                 <directory>src/it-select2-thymeleaf/resources/</directory>
                                  <targetPath>${project.build.testOutputDirectory}</targetPath>
                                  <includes>
                                     <include>**/*</include>

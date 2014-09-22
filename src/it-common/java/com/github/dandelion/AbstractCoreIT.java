@@ -31,7 +31,7 @@ package com.github.dandelion;
 
 public abstract class AbstractCoreIT extends AbstractIT {
 
-	public static final String DEFAULT_011x_JSP = "src/it-jsp-core/resources/webapp-default";
-	public static final String DEFAULT_011x_TML = "src/it-tml-core/resources/webapp-default";
+	public static final String DEFAULT_011x_JSP = "src/it-core-jsp/resources/webapp-default";
+	public static final String DEFAULT_011x_TML = "src/it-core-thymeleaf/resources/webapp-default";
 
 }

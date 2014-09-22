@@ -54,8 +54,8 @@ import com.github.dandelion.junit.JettyJUnitRunner.ServerConfig;
  */
 public abstract class AbstractDatatablesIT extends AbstractIT {
 
-	public static final String DEFAULT_011x_JSP = "src/it-jsp-datatables/resources/webapp-default";
-	public static final String DEFAULT_011x_THYMELEAF = "src/it-tml-datatables/resources/webapp-default";
+	public static final String DEFAULT_011x_JSP = "src/it-datatables-jsp/resources/webapp-default";
+	public static final String DEFAULT_011x_THYMELEAF = "src/it-datatables-thymeleaf/resources/webapp-default";
 
 	public static final String TABLE_ID = "myTableId";
 	public static final String TABLE_ID2 = "mySecondTableId";

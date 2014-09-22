@@ -20,7 +20,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ServerConfig(templateEngine = TemplateEngine.JSP, webappBase = MessageIT.WEBAPP_BASE)
 public class MessageIT extends AbstractDatatablesIT {
 
-	public static final String WEBAPP_BASE = "src/it-jsp-datatables/resources/webapp-spring3-messages";
+	public static final String WEBAPP_BASE = "src/it-datatables-jsp/resources/webapp-spring3-messages";
 	
 	@BeforeClass
 	public static void setup() {
