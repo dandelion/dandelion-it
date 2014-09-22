@@ -146,6 +146,11 @@
 
       <!-- Selenium & friends -->
       <dependency>
+         <groupId>net.anthavio</groupId>
+         <artifactId>phanbedder-1.9.7</artifactId>
+         <version>1.0.0</version>
+      </dependency>
+      <dependency>
          <groupId>com.github.detro.ghostdriver</groupId>
          <artifactId>phantomjsdriver</artifactId>
          <version>${phantomjsdriver.version}</version>
@@ -183,7 +188,7 @@
          <version>${jetty.test.version}</version>
          <scope>test</scope>
       </dependency>
-      
+
       <!-- Logging -->
       <dependency>
          <groupId>org.slf4j</groupId>
@@ -196,7 +201,7 @@
          <version>${logback.version}</version>
          <scope>test</scope>
       </dependency>
-      
+
    </dependencies>
 
    <build>

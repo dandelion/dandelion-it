@@ -29,7 +29,10 @@
  */
 package com.github.dandelion;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
+
+import net.anthavio.phanbedder.Phanbedder;
 
 import org.fluentlenium.core.Fluent;
 import org.fluentlenium.core.domain.FluentWebElement;
@@ -40,6 +43,7 @@ import org.junit.runner.Description;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import com.github.dandelion.core.DandelionException;
@@ -69,7 +73,10 @@ public abstract class AbstractIT extends Fluent {
 		@Override
 		protected void starting(Description description) {
 
+			File phantomjs = Phanbedder.unpack();
 			DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+			desiredCapabilities.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY,
+					phantomjs.getAbsolutePath());
 			desiredCapabilities.setCapability("phantomjs.page.settings.handlesAlerts", true);
 			desiredCapabilities.setCapability("phantomjs.page.settings.localToRemoteUrlAccessEnabled", true);
 			desiredCapabilities.setCapability("phantomjs.page.settings.webSecurityEnabled", false);
