@@ -1,0 +1,17 @@
+{
+    "bundle": "exclude-asset",
+    "assets": [
+        {
+            "locations": {
+                "cdn": "http://any.cdn/a1.js",
+                "classpath": "folder/subfolder/a1.js"
+            }
+        },
+        {
+            "locations": {
+                "cdn": "http://any.cdn/a2.js",
+                "classpath": "folder/subfolder/a2.js"
+            }
+        }
+    ]
+}
