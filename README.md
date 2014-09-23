@@ -1,13 +1,27 @@
 Dandelion Integration Tests
 ========================
 
-TODO
+This repository contains a set of integration tests for all Dandelion components, including the core of the framework.
+
+All tests use the following technology stack:
+
+ * [FluentLenium](https://github.com/FluentLenium/FluentLenium), which provides a fluent interface to the [Selenium Web Driver](http://seleniumhq.org/docs/03_webdriver.html) and pulls [Selenium](http://docs.seleniumhq.org/) 
+ * [GhostDriver](https://github.com/detro/ghostdriver) which provides [Web Driver](http://seleniumhq.org/docs/03_webdriver.html) bindings for Java and uses [PhantomJS](http://phantomjs.org/) as back-end
+ * [Phanbedder](https://github.com/anthavio/phanbedder) which smartly ships [PhantomJS](http://phantomjs.org/) binaries 
+ * [AssertJ](http://joel-costigliola.github.io/assertj/) as a replacement for [JUnit](http://junit.org/) assertions 
+ * [Jetty](http://www.eclipse.org/jetty/) as an embedded HTTP server
+
+And depending on the test context:
+
+ * [Thymeleaf](http://www.thymeleaf.org/)
+ * [JSP](http://www.oracle.com/technetwork/java/javaee/jsp/index.html)
+ * [Spring](http://projects.spring.io/spring-framework/) / [Jackson](http://jackson.codehaus.org/)
 
 ## IDE configuration
 
 ### Using Eclipse
 
-Just right-click on the dandelion-it Maven project, then Maven and enter the following active profile:
+Just right-click on the dandelion-it Maven project, then select Maven in the left menu and enter the following pattern:
 
 ````
 [component-name]-[template-engine]
@@ -15,16 +29,18 @@ Just right-click on the dandelion-it Maven project, then Maven and enter the fol
 
 Where `component-name` is one of:
 
- * `core` for the Dandelion-Core component
- * `datatables`
- * `select2`
+ * `core` for [Dandelion-Core](http://dandelion.github.io/dandelion/)
+ * `datatables` for the [Dandelion-Datatables](http://dandelion.github.io/datatables/) component
+ * `select2` soon...
 
 And `template-engine` is one of:
 
  * `jsp` for executing the integration tests using JSP
  * `tml` for executing the integration tests using Thymeleaf
 
-TODO: screenshot
+For example, when activating the following profile, IT related to Dandelion-Datatables only will be executed.
+
+<img src="https://cloud.githubusercontent.com/assets/1398586/4368757/733192f8-42f2-11e4-981a-58272683e83b.png" style="text-align:center;" />
 
 ### Using IntelliJ
 
