@@ -7,7 +7,7 @@ All tests use the following technology stack:
 
  * [FluentLenium](https://github.com/FluentLenium/FluentLenium), which provides a fluent interface to the [Selenium Web Driver](http://seleniumhq.org/docs/03_webdriver.html) and pulls [Selenium](http://docs.seleniumhq.org/) 
  * [GhostDriver](https://github.com/detro/ghostdriver) which provides [Web Driver](http://seleniumhq.org/docs/03_webdriver.html) bindings for Java and uses [PhantomJS](http://phantomjs.org/) as back-end
- * [Phanbedder](https://github.com/anthavio/phanbedder) which smartly ships [PhantomJS](http://phantomjs.org/) binaries 
+ * [Phanbedder](https://github.com/anthavio/phanbedder) which smartly ships [PhantomJS](http://phantomjs.org/) binaries, thus simplifying the required configuration both on workstations and in the Cloud 
  * [AssertJ](http://joel-costigliola.github.io/assertj/) as a replacement for [JUnit](http://junit.org/) assertions 
  * [Jetty](http://www.eclipse.org/jetty/) as an embedded Web server
 
