@@ -44,9 +44,9 @@ See above for the signification of `component-name` and `template-engine`.
 
 All integration tests are automatically executed as soon as the corresponding component is built on [Jenkins](https://dandelion.ci.cloudbees.com). All IT statuses can be seen below:
 
-[![Core IT Status](https://dandelion.ci.cloudbees.com/job/dandelion-core-it/badge/icon)](https://dandelion.ci.cloudbees.com/job/dandelion-core-it/)
-
-[![Datatables IT Status](https://dandelion.ci.cloudbees.com/job/dandelion-datatables-it/badge/icon)](https://dandelion.ci.cloudbees.com/job/dandelion-datatables-it/)
+ * Core: [![Core IT Status](https://dandelion.ci.cloudbees.com/job/dandelion-core-it/badge/icon)](https://dandelion.ci.cloudbees.com/job/dandelion-core-it/)
+ * Datatables: [![Datatables IT Status](https://dandelion.ci.cloudbees.com/job/dandelion-datatables-it/badge/icon)](https://dandelion.ci.cloudbees.com/job/dandelion-datatables-it/)
+ * Select2: soon...
 
 =
 The [Dandelion team](http://dandelion.github.io/team/).
