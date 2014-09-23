@@ -51,7 +51,6 @@ import org.junit.runners.model.FrameworkMethod;
 import org.junit.runners.model.InitializationError;
 import org.junit.runners.model.MultipleFailureException;
 import org.junit.runners.model.Statement;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.github.dandelion.AbstractIT;
 import com.github.dandelion.TemplateEngine;
