@@ -87,7 +87,7 @@ public abstract class AbstractIT extends Fluent {
 			driver = new PhantomJSDriver(desiredCapabilities);
 			driver.manage().deleteAllCookies();
 			driver.manage().window().setSize(DEFAULT_WINDOW_SIZE);
-			driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+			driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 			driver.manage().timeouts().setScriptTimeout(5, TimeUnit.SECONDS);
 			initFluent(driver).withDefaultUrl(defaultUrl());
