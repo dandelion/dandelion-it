@@ -44,9 +44,20 @@ See above for the signification of `component-name` and `template-engine`.
 
 All integration tests are automatically executed as soon as the corresponding component is built on [Jenkins](https://dandelion.ci.cloudbees.com). All IT statuses can be seen below:
 
- * Core: [![Core IT Status](https://dandelion.ci.cloudbees.com/job/dandelion-core-it/badge/icon)](https://dandelion.ci.cloudbees.com/job/dandelion-core-it/)
- * Datatables: [![Datatables IT Status](https://dandelion.ci.cloudbees.com/job/dandelion-datatables-it/badge/icon)](https://dandelion.ci.cloudbees.com/job/dandelion-datatables-it/)
- * Select2: soon...
+<table>
+<tr>
+<td><a href="http://dandelion.github.io/dandelion/">Dandelion-Core</a></td>
+<td><a href='https://dandelion.ci.cloudbees.com/job/dandelion-core-it/'><img src='https://dandelion.ci.cloudbees.com/job/dandelion-core-it/badge/icon'></a></td>
+</tr>
+<tr>
+<td><a href="http://dandelion.github.io/datatables/">Dandelion-Datatables</a></td>
+<td><a href='https://dandelion.ci.cloudbees.com/job/dandelion-datatables-it/'><img src='https://dandelion.ci.cloudbees.com/job/dandelion-datatables-it/badge/icon'></a></td>
+</tr>
+<tr>
+<td>Dandelion-Select2</td>
+<td>Soon...</td>
+</tr>
+</table>
 
 =
 The [Dandelion team](http://dandelion.github.io/team/).
