@@ -45,13 +45,13 @@ import com.github.dandelion.junit.JettyJUnitRunner.ServerConfig;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(JettyJUnitRunner.class)
-@ServerConfig(templateEngine = TemplateEngine.THYMELEAF, webappBase = AbstractCoreIT.DEFAULT_011x_TML)
-public class BundleInclusionsIT extends AbstractCoreIT {
+@ServerConfig(templateEngine = TemplateEngine.JSP, webappBase = AbstractCoreIT.DEFAULT_011x_JSP)
+public class BundleExclusionsIT extends AbstractCoreIT {
 
 	@BeforeClass
 	public static void setup() {
-		String path = new File(DEFAULT_011x_TML
-				+ "/WEB-INF/views/bundle-inclusions/json/dandelion".replace("/", File.separator)).getAbsolutePath();
+		String path = new File(DEFAULT_011x_JSP
+				+ "/WEB-INF/views/bundle-exclusions/json/dandelion".replace("/", File.separator)).getAbsolutePath();
 		System.setProperty(StandardConfigurationLoader.DANDELION_CONFIGURATION, path);
 	}
 
@@ -61,31 +61,9 @@ public class BundleInclusionsIT extends AbstractCoreIT {
 	}
 
 	@Test
-	public void should_include_one_bundle_using_the_html_tag() {
-		goToPage("bundle-inclusions/json/bundle_inclusions1");
-		assertThat(find("link")).hasSize(1);
-		assertThat(find("script")).hasSize(2);
-	}
-
-	@Test
-	public void should_include_one_bundle_using_the_head_tag() {
-		goToPage("bundle-inclusions/json/bundle_inclusions2");
-		assertThat(find("link")).hasSize(1);
-		assertThat(find("script")).hasSize(2);
-	}
-
-	@Test
-	public void should_include_one_bundle_using_the_body_tag() {
-		goToPage("bundle-inclusions/json/bundle_inclusions3");
-		assertThat(find("link")).hasSize(1);
-		assertThat(find("script")).hasSize(2);
-	}
-
-	@Test
-	public void should_include_one_bundle_using_a_html5_data_attribute() {
-		goToPage("bundle-inclusions/json/bundle_inclusions_html5");
-		System.out.println(driver.getPageSource());
-		assertThat(find("link")).hasSize(1);
-		assertThat(find("script")).hasSize(2);
+	public void should_include_and_exclude_the_same_bundle() {
+		goToPage("bundle-exclusions/json/bundle_exclusions1");
+		assertThat(text("link")).hasSize(0);
+		assertThat(text("script")).hasSize(0);
 	}
 }

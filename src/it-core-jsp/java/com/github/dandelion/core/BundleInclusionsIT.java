@@ -45,12 +45,12 @@ import com.github.dandelion.junit.JettyJUnitRunner.ServerConfig;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(JettyJUnitRunner.class)
-@ServerConfig(templateEngine = TemplateEngine.THYMELEAF, webappBase = AbstractCoreIT.DEFAULT_011x_TML)
+@ServerConfig(templateEngine = TemplateEngine.JSP, webappBase = AbstractCoreIT.DEFAULT_011x_JSP)
 public class BundleInclusionsIT extends AbstractCoreIT {
 
 	@BeforeClass
 	public static void setup() {
-		String path = new File(DEFAULT_011x_TML
+		String path = new File(DEFAULT_011x_JSP
 				+ "/WEB-INF/views/bundle-inclusions/json/dandelion".replace("/", File.separator)).getAbsolutePath();
 		System.setProperty(StandardConfigurationLoader.DANDELION_CONFIGURATION, path);
 	}
@@ -63,28 +63,6 @@ public class BundleInclusionsIT extends AbstractCoreIT {
 	@Test
 	public void should_include_one_bundle_using_the_html_tag() {
 		goToPage("bundle-inclusions/json/bundle_inclusions1");
-		assertThat(find("link")).hasSize(1);
-		assertThat(find("script")).hasSize(2);
-	}
-
-	@Test
-	public void should_include_one_bundle_using_the_head_tag() {
-		goToPage("bundle-inclusions/json/bundle_inclusions2");
-		assertThat(find("link")).hasSize(1);
-		assertThat(find("script")).hasSize(2);
-	}
-
-	@Test
-	public void should_include_one_bundle_using_the_body_tag() {
-		goToPage("bundle-inclusions/json/bundle_inclusions3");
-		assertThat(find("link")).hasSize(1);
-		assertThat(find("script")).hasSize(2);
-	}
-
-	@Test
-	public void should_include_one_bundle_using_a_html5_data_attribute() {
-		goToPage("bundle-inclusions/json/bundle_inclusions_html5");
-		System.out.println(driver.getPageSource());
 		assertThat(find("link")).hasSize(1);
 		assertThat(find("script")).hasSize(2);
 	}
