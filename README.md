@@ -9,7 +9,7 @@ All tests use the following technology stack:
  * [GhostDriver](https://github.com/detro/ghostdriver) which provides [Web Driver](http://seleniumhq.org/docs/03_webdriver.html) bindings for Java and uses [PhantomJS](http://phantomjs.org/) as back-end
  * [Phanbedder](https://github.com/anthavio/phanbedder) which smartly ships [PhantomJS](http://phantomjs.org/) binaries 
  * [AssertJ](http://joel-costigliola.github.io/assertj/) as a replacement for [JUnit](http://junit.org/) assertions 
- * [Jetty](http://www.eclipse.org/jetty/) as an embedded HTTP server
+ * [Jetty](http://www.eclipse.org/jetty/) as an embedded Web server
 
 And depending on the test context:
 
