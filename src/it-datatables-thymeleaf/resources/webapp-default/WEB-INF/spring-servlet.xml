@@ -6,10 +6,9 @@
          http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
          http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-<!--    <mvc:annotation-driven /> -->
+   <mvc:annotation-driven />
 
-<!--    <context:component-scan base-package="com.github.dandelion.datatables" /> -->
-   
-<!--    <mvc:default-servlet-handler /> -->
-   
+   <context:component-scan base-package="com.github.dandelion" />
+
+   <mvc:default-servlet-handler />
 </beans>

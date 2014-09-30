@@ -40,10 +40,6 @@ import com.github.dandelion.junit.JettyJUnitRunner.ServerConfig;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- *
- * @author Thibault Duchateau
- */
 @RunWith(JettyJUnitRunner.class)
 @ServerConfig(templateEngine = TemplateEngine.THYMELEAF, webappBase = AbstractDatatablesIT.DEFAULT_011x_THYMELEAF)
 public class ConfigurationIT extends AbstractDatatablesIT {
@@ -68,9 +64,10 @@ public class ConfigurationIT extends AbstractDatatablesIT {
 	
 	@Test
 	public void should_raise_an_exception_when_defining_a_property() {
+		
 		goToPage("configuration/wrong_markup");
 		assertThat(driver.getPageSource())
 				.contains(
-						"ConfigurationProcessingException: The attribute 'dt:name' is required when overloading a configuration property.");
+						"DandelionException: The attribute 'dt:name' is required when overloading a configuration property.");
 	}
 }

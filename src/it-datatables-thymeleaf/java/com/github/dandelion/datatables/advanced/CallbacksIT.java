@@ -122,7 +122,7 @@ public class CallbacksIT extends AbstractDatatablesIT {
 	
 	@Test
 	public void should_generate_info_callback() {
-		goToPage("advanced/callbacks/callback_info", true);
+		goToPage("advanced/callbacks/callback_info");
 		assertThat(getConfigurationFromPage("advanced/callbacks/callback_info")).contains(DTConstants.DT_FN_INFO_CBK);
 	}
 	

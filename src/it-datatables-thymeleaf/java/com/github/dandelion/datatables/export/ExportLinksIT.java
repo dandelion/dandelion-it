@@ -89,7 +89,7 @@ public class ExportLinksIT extends AbstractDatatablesIT {
 	
 	@Test
 	public void should_generate_csv_link_with_custom_url() {
-		goToPage("export/custom_csv_url", true);
+		goToPage("export/custom_csv_url");
 		System.out.println(getConfigurationFromPage("export/custom_csv_url"));
 		assertThat(find("div.dataTables_export ")).hasSize(1);
 		assertThat(find("div.dataTables_export").findFirst("a").getText()).isEqualTo("CSV");

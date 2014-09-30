@@ -34,7 +34,7 @@ public class CustomExtensionsIT extends AbstractDatatablesIT {
 	
 	@Test
 	public void should_enable_myCustomFeature() {
-		goToPage("advanced/custom-extension/custom_extensions", true);
+		goToPage("advanced/custom-extension/custom_extensions");
 		assertThat(getConfigurationFromPage("advanced/custom-extension/custom_extensions")).contains("\"bStateSave\":true");
 	}
 	

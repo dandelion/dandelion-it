@@ -51,7 +51,7 @@ public class DomIT extends AbstractDatatablesIT {
 
 	@Test
 	public void should_apply_css_using_dom() {
-		goToPage("basics/dom_dom", true);
+		goToPage("basics/dom_dom");
 		assertThat(getWrapper().find("div.dataTables_filter")).hasSize(0);
 	}
 }
