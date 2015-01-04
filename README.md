@@ -17,6 +17,25 @@ And depending on the test context:
  * [JSP](http://www.oracle.com/technetwork/java/javaee/jsp/index.html)
  * [Spring](http://projects.spring.io/spring-framework/) / [Jackson](http://jackson.codehaus.org/)
 
+## Continuous testing
+
+All integration tests are automatically executed as soon as the corresponding component is built on [Jenkins](https://dandelion.ci.cloudbees.com). All IT statuses can be seen below:
+
+<table>
+<tr>
+<td><a href="http://dandelion.github.io/dandelion/">Dandelion-Core</a></td>
+<td><a href='https://dandelion.ci.cloudbees.com/job/dandelion-core-it/'><img src='https://dandelion.ci.cloudbees.com/job/dandelion-core-it/badge/icon'></a></td>
+</tr>
+<tr>
+<td><a href="http://dandelion.github.io/datatables/">Dandelion-Datatables</a></td>
+<td><a href='https://dandelion.ci.cloudbees.com/job/dandelion-datatables-it/'><img src='https://dandelion.ci.cloudbees.com/job/dandelion-datatables-it/badge/icon'></a></td>
+</tr>
+<tr>
+<td>Dandelion-Select2</td>
+<td>Soon...</td>
+</tr>
+</table>
+
 ## IDE configuration
 
 ### Using Eclipse
@@ -55,25 +74,6 @@ mvn verify -P [component-name]-[template-engine]
 ````
 
 See above for the signification of `component-name` and `template-engine`.
-
-## Continuous testing
-
-All integration tests are automatically executed as soon as the corresponding component is built on [Jenkins](https://dandelion.ci.cloudbees.com). All IT statuses can be seen below:
-
-<table>
-<tr>
-<td><a href="http://dandelion.github.io/dandelion/">Dandelion-Core</a></td>
-<td><a href='https://dandelion.ci.cloudbees.com/job/dandelion-core-it/'><img src='https://dandelion.ci.cloudbees.com/job/dandelion-core-it/badge/icon'></a></td>
-</tr>
-<tr>
-<td><a href="http://dandelion.github.io/datatables/">Dandelion-Datatables</a></td>
-<td><a href='https://dandelion.ci.cloudbees.com/job/dandelion-datatables-it/'><img src='https://dandelion.ci.cloudbees.com/job/dandelion-datatables-it/badge/icon'></a></td>
-</tr>
-<tr>
-<td>Dandelion-Select2</td>
-<td>Soon...</td>
-</tr>
-</table>
 
 =
 The [Dandelion team](http://dandelion.github.io/team/).
