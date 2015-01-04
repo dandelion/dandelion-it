@@ -29,7 +29,6 @@
  */
 package com.github.dandelion;
 
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -40,8 +39,4 @@ public class GenericController {
 	public String goToIndex() {
 		return "index";
 	}
-	
-//	@RequestMapping("/**/*")
-//	public void defaultRequest() {
-//	}
 }

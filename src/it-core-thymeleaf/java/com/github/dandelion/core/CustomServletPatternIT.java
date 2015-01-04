@@ -62,8 +62,8 @@ public class CustomServletPatternIT extends AbstractCoreIT {
 	}
 
 	@Test
-	public void should_display_column_headers_from_spring_message_source() {
-		goToPage("index");
+	public void should_inject_asset_with_custom_servlet_pattern() {
+		goToPage("index", true);
 		assertThat(findFirst("link").getAttribute("href")).contains("/my-custom-pattern/");
 		assertThat(findFirst("script").getAttribute("src")).contains("/my-custom-pattern/");
 	}

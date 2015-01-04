@@ -62,7 +62,7 @@ public class BundleInclusionsIT extends AbstractCoreIT {
 
 	@Test
 	public void should_include_one_bundle_using_the_html_tag() {
-		goToPage("bundle-inclusions/json/bundle_inclusions1");
+		goToPage("bundle-inclusions/json/bundle_inclusions1", true);
 		assertThat(find("link")).hasSize(1);
 		assertThat(find("script")).hasSize(2);
 	}
