@@ -34,12 +34,14 @@ import java.net.URL;
 
 import org.fluentlenium.core.domain.FluentWebElement;
 import org.springframework.core.annotation.AnnotationUtils;
+import org.springframework.mock.web.MockHttpServletRequest;
 
 import com.github.dandelion.core.DandelionException;
 import com.github.dandelion.core.asset.Asset;
 import com.github.dandelion.core.asset.AssetType;
 import com.github.dandelion.core.asset.cache.AssetCacheManager;
 import com.github.dandelion.core.utils.ResourceUtils;
+import com.github.dandelion.core.utils.StringUtils;
 import com.github.dandelion.core.web.DandelionServlet;
 import com.github.dandelion.junit.JettyJUnitRunner.ServerConfig;
 
@@ -101,23 +103,25 @@ public abstract class AbstractDatatablesIT extends AbstractIT {
 		AssetCacheManager cacheManager = new AssetCacheManager(null);
 		Asset asset = new Asset("dandelion-datatables", "0.10.0", AssetType.js);
 		String cacheKey = null;
+		MockHttpServletRequest request = new MockHttpServletRequest();
+		request.setServerName(AbstractIT.SERVER_HOST);
+		request.setServerPort(AbstractIT.SERVER_PORT);
 
 		switch (serverConfig.templateEngine()) {
 		case JSP:
-			cacheKey = cacheManager.generateCacheKey("http://" + SERVER_HOST + ":" + SERVER_PORT + "/" + page,
-					asset);
+			request.setRequestURI("/" + page);
+			cacheKey = cacheManager.generateCacheKey(request, asset);
 			break;
 		case THYMELEAF:
-			cacheKey = cacheManager.generateCacheKey(
-					"http://" + SERVER_HOST + ":" + SERVER_PORT + "/thymeleaf/" + page, asset);
+			request.setRequestURI("/thymeleaf/" + page);
+			cacheKey = cacheManager.generateCacheKey(request, asset);
 			break;
 		default:
 			break;
-
 		}
 
-		String url = "http://" + SERVER_HOST + ":" + SERVER_PORT + DandelionServlet.DANDELION_ASSETS_URL + cacheKey;
-		return getContentFromUrl(url);
+		String url = "http://" + SERVER_HOST + ":" + SERVER_PORT + DandelionServlet.DANDELION_ASSETS_URL + cacheKey + "/dandelion-datatables.js";
+		return StringUtils.getTestString(getContentFromUrl(url));
 	}
 
 	private String getContentFromUrl(String url) {
