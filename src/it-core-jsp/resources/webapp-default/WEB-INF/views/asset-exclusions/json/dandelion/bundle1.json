@@ -4,19 +4,19 @@
         {
             "locations": {
                 "remote": "http://any.cdn/b1a1.js",
-                "classpath": "folder/subfolder/b1a1.js"
+                "classpath": "assets/js/b1a1.js"
             }
         },
         {
             "locations": {
                 "remote": "http://any.cdn/b1a2.js",
-                "classpath": "folder/subfolder/b1a2.js"
+                "classpath": "assets/js/b1a2.js"
             }
         },
         {
             "locations": {
                 "remote": "http://any.cdn/b1a3.css",
-                "classpath": "folder/subfolder/b1a3.css"
+                "classpath": "assets/css/b1a3.css"
             }
         }
     ]
