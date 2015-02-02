@@ -39,7 +39,7 @@ import org.springframework.mock.web.MockHttpServletRequest;
 import com.github.dandelion.core.DandelionException;
 import com.github.dandelion.core.asset.Asset;
 import com.github.dandelion.core.asset.AssetType;
-import com.github.dandelion.core.asset.cache.AssetCacheManager;
+import com.github.dandelion.core.utils.AssetUtils;
 import com.github.dandelion.core.utils.ResourceUtils;
 import com.github.dandelion.core.utils.StringUtils;
 import com.github.dandelion.core.web.DandelionServlet;
@@ -100,7 +100,6 @@ public abstract class AbstractDatatablesIT extends AbstractIT {
 			throw new DandelionException("The @ServerConfig annotation must be present");
 		}
 
-		AssetCacheManager cacheManager = new AssetCacheManager(null);
 		Asset asset = new Asset("dandelion-datatables", "0.10.0", AssetType.js);
 		String cacheKey = null;
 		MockHttpServletRequest request = new MockHttpServletRequest();
@@ -110,11 +109,11 @@ public abstract class AbstractDatatablesIT extends AbstractIT {
 		switch (serverConfig.templateEngine()) {
 		case JSP:
 			request.setRequestURI("/" + page);
-			cacheKey = cacheManager.generateCacheKey(request, asset);
+			cacheKey = AssetUtils.generateCacheKey(asset, request);
 			break;
 		case THYMELEAF:
 			request.setRequestURI("/thymeleaf/" + page);
-			cacheKey = cacheManager.generateCacheKey(request, asset);
+			cacheKey = AssetUtils.generateCacheKey(asset, request);
 			break;
 		default:
 			break;
